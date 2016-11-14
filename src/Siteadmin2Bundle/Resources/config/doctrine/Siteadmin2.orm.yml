@@ -1,0 +1,29 @@
+Siteadmin2Bundle\Entity\Siteadmin2:
+    type: entity
+    table: null
+    repositoryClass: Siteadmin2Bundle\Repository\Siteadmin2Repository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+        image1:
+            type: string
+            length: 255
+        image2:
+            type: string
+            length: 255
+        image3:
+            type: string
+            length: 255
+    lifecycleCallbacks:
+      prePersist: [ preUpload ]
+      preUpdate: [ preUpload ]
+      postPersist: [ upload ]
+      postUpdate: [ upload ]
+      postRemove: [ removeUpload ]

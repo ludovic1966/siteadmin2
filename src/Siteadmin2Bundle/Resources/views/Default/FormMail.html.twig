@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Formulaire Mail</title>
+    </head>
+    <form action="{{  path('siteadmin2_sendMail')}}" method="POST">
+
+
+        subjet:
+        <input type="text" name="subject">
+        Email:
+        <input type="text" name="email">
+        text:
+        <textarea name="message"></textarea>
+        <input type="submit" value="send">
+        </form>
+</html>

@@ -1,0 +1,19 @@
+siteadmin2_siteadmin2:
+    resource: "@Siteadmin2Bundle/Resources/config/routing/siteadmin2.yml"
+    prefix:   /siteadmin2
+
+siteadmin2_homepage:
+    path:     /
+    defaults: { _controller: Siteadmin2Bundle:Default:index }
+
+siteadmin2_redirection:
+    path:     /redirection
+    defaults: { _controller: Siteadmin2Bundle:Default:redirection }
+
+siteadmin2_sendMail:
+    path:     /sendMail
+    defaults: { _controller: Siteadmin2Bundle:Default:sendMail }
+
+siteadmin2_MailEnvoye:
+    path:     /MailEnvoye
+    defaults: { _controller: Siteadmin2Bundle:Default:MailEnvoye }

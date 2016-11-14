@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Siteadmin2</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ siteadmin2.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ siteadmin2.name }}</td>
+            </tr>
+            <tr>
+                <th>Image1</th>
+                <td>{{ siteadmin2.image1 }}</td>
+                <img src="{{ app.request.basepath }}/uploads/{{ siteadmin2.image1 }}">
+            </tr>
+            <tr>
+                <th>Image2</th>
+                <td>{{ siteadmin2.image2 }}</td>
+                <img src="{{ app.request.basepath }}/uploads/{{ siteadmin2.image2 }}">
+            </tr>
+            <tr>
+                <th>Image3</th>
+                <td>{{ siteadmin2.image3 }}</td>
+                <img src="{{ app.request.basepath }}/uploads/{{ siteadmin2.image3 }}">
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('siteadmin2_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('siteadmin2_edit', { 'id': siteadmin2.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

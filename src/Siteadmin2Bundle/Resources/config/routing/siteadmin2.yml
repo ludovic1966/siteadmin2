@@ -1,0 +1,26 @@
+siteadmin2_index:
+    path:     /
+    defaults: { _controller: "Siteadmin2Bundle:Siteadmin2:index" }
+    methods:  GET
+
+siteadmin2_show:
+    path:     /{id}/show
+    defaults: { _controller: "Siteadmin2Bundle:Siteadmin2:show" }
+    methods:  GET
+
+siteadmin2_new:
+    path:     /new
+    defaults: { _controller: "Siteadmin2Bundle:Siteadmin2:new" }
+    methods:  [GET, POST]
+
+siteadmin2_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "Siteadmin2Bundle:Siteadmin2:edit" }
+    methods:  [GET, POST]
+
+siteadmin2_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "Siteadmin2Bundle:Siteadmin2:delete" }
+    methods:  DELETE
+
+
